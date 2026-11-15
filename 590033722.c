@@ -78,8 +78,90 @@ void addStudent(struct Student students[], int *count)
 
     (*count)++;
 
-    printf("Student SAP ID entered successfully!\n");
+    printf("Student added successfully.\n");
 }
+
+
+void displayAllStudents(struct Student students[], int count)
+{
+    int i, j;
+
+    if (count == 0)
+    {
+        printf("\nNo student records available.\n");
+        return;
+    }
+
+    printf("\n========== ALL STUDENT RECORDS ==========\n");
+
+    for (i = 0; i < count; i++)
+    {
+        printf("\nStudent %d\n", i + 1);
+        printf("-----------------------------------------\n");
+
+        printf("SAP ID: %lld\n", students[i].sapID);
+        printf("Roll Number: %s\n", students[i].rollNo);
+        printf("Name: %s\n", students[i].name);
+        printf("Phone: %s\n", students[i].phone);
+        printf("Email: %s\n", students[i].email);
+        printf("Year: %d\n", students[i].year);
+        printf("Semester: %d\n", students[i].semester);
+
+        printf("Semester-wise SGPA:\n");
+
+        for (j = 0; j < 8; j++)
+        {
+            if (students[i].sgpa[j] >= 0)
+            {
+                printf("Semester %d: %.2f\n",
+                       j + 1, students[i].sgpa[j]);
+            }
+        }
+    }
+}
+
+
+void searchStudent(struct Student students[], int count)
+{
+    long long searchID;
+    int i, j;
+
+    printf("\nEnter SAP ID to search: ");
+    if (scanf("%lld", &searchID) != 1)
+    {
+        printf("Invalid SAP ID input.\n");
+        return;
+    }
+
+    for (i = 0; i < count; i++)
+    {
+        if (students[i].sapID == searchID)
+        {
+            printf("\nStudent Found!\n");
+            printf("SAP ID: %lld\n", students[i].sapID);
+            printf("Roll Number: %s\n", students[i].rollNo);
+            printf("Name: %s\n", students[i].name);
+            printf("Phone: %s\n", students[i].phone);
+            printf("Email: %s\n", students[i].email);
+            printf("Year: %d\n", students[i].year);
+            printf("Semester: %d\n", students[i].semester);
+
+            for (j = 0; j < 8; j++)
+            {
+                if (students[i].sgpa[j] >= 0)
+                {
+                    printf("Semester %d SGPA: %.2f\n",
+                           j + 1, students[i].sgpa[j]);
+                }
+            }
+
+            return;
+        }
+    }
+
+    printf("\nStudent with SAP ID %lld not found.\n", searchID);
+}
+
 
 int main()
 {
@@ -114,7 +196,7 @@ int main()
                 break;
 
             case 2:
-                printf("Search Student selected.\n");
+                searchStudent(students, studentCount);
                 break;
 
             case 3:
@@ -126,7 +208,7 @@ int main()
                 break;
 
             case 5:
-                printf("Display All Students selected.\n");
+                displayAllStudents(students, studentCount);
                 break;
 
             case 6:
