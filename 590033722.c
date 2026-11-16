@@ -341,6 +341,36 @@ void sortBySAPID(struct Student students[], int count)
 }
 
 
+void sortByName(struct Student students[], int count)
+{
+    struct Student temp;
+    int i, j;
+
+    if (count == 0)
+    {
+        printf("\nNo student records available.\n");
+        return;
+    }
+
+    for (i = 0; i < count - 1; i++)
+    {
+        for (j = 0; j < count - i - 1; j++)
+        {
+            if (strcmp(students[j].name,
+                       students[j + 1].name) > 0)
+            {
+                temp = students[j];
+                students[j] = students[j + 1];
+                students[j + 1] = temp;
+            }
+        }
+    }
+
+    printf("\nStudents sorted by Name successfully!\n");
+    displayAllStudents(students, count);
+}
+
+
 
 int main()
 {
@@ -399,7 +429,7 @@ int main()
                 break;
 
             case 8:
-                printf("Sort by Name selected.\n");
+                sortByName(students, studentCount);
                 break;
 
             case 9:
