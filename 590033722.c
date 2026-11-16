@@ -312,6 +312,35 @@ void deleteStudent(struct Student students[], int *count)
 }
 
 
+void sortBySAPID(struct Student students[], int count)
+{
+    struct Student temp;
+    int i, j;
+
+    if (count == 0)
+    {
+        printf("\nNo student records available.\n");
+        return;
+    }
+
+    for (i = 0; i < count - 1; i++)
+    {
+        for (j = 0; j < count - i - 1; j++)
+        {
+            if (students[j].sapID > students[j + 1].sapID)
+            {
+                temp = students[j];
+                students[j] = students[j + 1];
+                students[j + 1] = temp;
+            }
+        }
+    }
+
+    printf("\nStudents sorted by SAP ID successfully!\n");
+    displayAllStudents(students, count);
+}
+
+
 
 int main()
 {
@@ -366,7 +395,7 @@ int main()
                 break;
 
             case 7:
-                printf("Sort by SAP ID selected.\n");
+                sortBySAPID(students, studentCount);
                 break;
 
             case 8:
