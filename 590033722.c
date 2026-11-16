@@ -163,6 +163,73 @@ void searchStudent(struct Student students[], int count)
 }
 
 
+float calculateCGPA(struct Student student)
+{
+    float total = 0.0f;
+    int count = 0;
+
+    for (int i = 0; i < 8; i++)
+    {
+        if (student.sgpa[i] >= 0 && student.sgpa[i] <= 10)
+        {
+            total += student.sgpa[i];
+            count++;
+        }
+    }
+
+    if (count == 0)
+    {
+        return -1.0f;
+    }
+
+    return total / count;
+}
+
+
+void displayStudentCGPA(struct Student students[], int count)
+{
+    long long sapID;
+    int found = 0;
+
+    printf("\nEnter SAP ID to calculate CGPA: ");
+    if (scanf("%lld", &sapID) != 1)
+    {
+        printf("Invalid SAP ID input.\n");
+        return;
+    }
+
+    for (int i = 0; i < count; i++)
+    {
+        if (students[i].sapID == sapID)
+        {
+            found = 1;
+
+            float cgpa = calculateCGPA(students[i]);
+
+            printf("\nStudent Name: %s\n", students[i].name);
+            printf("SAP ID: %lld\n", students[i].sapID);
+
+            if (cgpa < 0)
+            {
+                printf("CGPA not available. No semesters completed.\n");
+            }
+            else
+            {
+                printf("CGPA: %.2f\n", cgpa);
+            }
+
+            break;
+        }
+    }
+
+    if (!found)
+    {
+        printf("\nStudent not found!\n");
+    }
+}
+
+
+
 int main()
 {
     struct Student students[MAX_STUDENTS];
@@ -200,7 +267,7 @@ int main()
                 break;
 
             case 3:
-                printf("Display Student CGPA selected.\n");
+                displayStudentCGPA(students, studentCount);
                 break;
 
             case 4:
