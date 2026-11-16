@@ -271,6 +271,47 @@ void displayYearAverage(struct Student students[], int count)
 }
 
 
+void deleteStudent(struct Student students[], int *count)
+{
+    long long sapID;
+    int i, j;
+
+    if (*count == 0)
+    {
+        printf("\nNo student records available to delete.\n");
+        return;
+    }
+
+    printf("\nEnter SAP ID of student to delete: ");
+
+    if (scanf("%lld", &sapID) != 1)
+    {
+        printf("Invalid SAP ID input.\n");
+        return;
+    }
+
+    for (i = 0; i < *count; i++)
+    {
+        if (students[i].sapID == sapID)
+        {
+            printf("\nDeleting student: %s\n", students[i].name);
+
+            for (j = i; j < *count - 1; j++)
+            {
+                students[j] = students[j + 1];
+            }
+
+            (*count)--;
+
+            printf("Student record deleted successfully!\n");
+            return;
+        }
+    }
+
+    printf("\nStudent with SAP ID %lld not found.\n", sapID);
+}
+
+
 
 int main()
 {
@@ -321,7 +362,7 @@ int main()
                 break;
 
             case 6:
-                printf("Delete Student selected.\n");
+                deleteStudent(students, &studentCount);
                 break;
 
             case 7:
