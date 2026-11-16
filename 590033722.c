@@ -229,6 +229,48 @@ void displayStudentCGPA(struct Student students[], int count)
 }
 
 
+void displayYearAverage(struct Student students[], int count)
+{
+    int year, i;
+    int studentCount;
+    float totalCGPA, cgpa;
+
+    printf("\n===== YEAR-WISE AVERAGE CGPA =====\n");
+
+    for (year = 1; year <= 4; year++)
+    {
+        totalCGPA = 0.0f;
+        studentCount = 0;
+
+        for (i = 0; i < count; i++)
+        {
+            if (students[i].year == year)
+            {
+                cgpa = calculateCGPA(students[i]);
+
+                if (cgpa >= 0)
+                {
+                    totalCGPA += cgpa;
+                    studentCount++;
+                }
+            }
+        }
+
+        printf("\nYear %d: ", year);
+
+        if (studentCount == 0)
+        {
+            printf("No CGPA data available.\n");
+        }
+        else
+        {
+            printf("Average CGPA = %.2f (%d students)\n",
+                   totalCGPA / studentCount, studentCount);
+        }
+    }
+}
+
+
 
 int main()
 {
@@ -271,7 +313,7 @@ int main()
                 break;
 
             case 4:
-                printf("Display Average CGPA by Year selected.\n");
+                displayYearAverage(students, studentCount);
                 break;
 
             case 5:
