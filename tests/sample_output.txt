@@ -1,0 +1,834 @@
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 1
+
+--- Add New Student ---
+Enter SAP ID: 590033725
+Enter Roll Number: 101
+Enter Student Name: Rahul Verma
+Enter Phone Number: 9874514785
+Enter Email ID: rahulverma@gmail.com
+Enter Year (1-4): 2
+Enter Current Semester (1-8): 3
+How many semesters have been completed? 2
+Enter SGPA for Semester 1: 8
+Enter SGPA for Semester 2: 9
+
+Student added successfully!
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 1
+
+--- Add New Student ---
+Enter SAP ID: 590033721
+Enter Roll Number: 102
+Enter Student Name: Aarav Mehta
+Enter Phone Number: 7589451258
+Enter Email ID: aarav789@gmail.com
+Enter Year (1-4): 2
+Enter Current Semester (1-8): 4
+How many semesters have been completed? 3
+Enter SGPA for Semester 1: 7
+Enter SGPA for Semester 2: 7.5
+Enter SGPA for Semester 3: 8
+
+Student added successfully!
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 1
+
+--- Add New Student ---
+Enter SAP ID: 590033723
+Enter Roll Number: 103
+Enter Student Name: Simran Kaur
+Enter Phone Number: 9574815487
+Enter Email ID: simrankaur4@gmail.com
+Enter Year (1-4): 3
+Enter Current Semester (1-8): 6
+How many semesters have been completed? 5
+Enter SGPA for Semester 1: 6
+Enter SGPA for Semester 2: 6.5
+Enter SGPA for Semester 3: 6.3
+Enter SGPA for Semester 4: 6.3
+Enter SGPA for Semester 5: 6.5
+
+Student added successfully!
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 1
+
+--- Add New Student ---
+Enter SAP ID: 590033724
+Enter Roll Number: 104
+Enter Student Name: Priya Verma
+Enter Phone Number: 7589847256
+Enter Email ID: vermapriya@gmail.com
+Enter Year (1-4): 4
+Enter Current Semester (1-8): 8
+How many semesters have been completed? 7
+Enter SGPA for Semester 1: 5
+Enter SGPA for Semester 2: 5.5
+Enter SGPA for Semester 3: 5.5
+Enter SGPA for Semester 4: 5.3
+Enter SGPA for Semester 5: 5.5
+Enter SGPA for Semester 6: 5
+Enter SGPA for Semester 7: 5.5
+
+Student added successfully!
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 1
+
+--- Add New Student ---
+Enter SAP ID: 590033722
+Enter Roll Number: 105
+Enter Student Name: Karan Singh
+Enter Phone Number: 8745896511
+Enter Email ID: karansingh@gmail.com
+Enter Year (1-4): 1
+Enter Current Semester (1-8): 1
+How many semesters have been completed? 0
+
+Student added successfully!
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 2
+
+Enter SAP ID to search: 590033724
+
+Student Found!
+SAP ID: 590033724
+Roll Number: 104
+Name: Priya Verma
+Phone: 7589847256
+Email: vermapriya@gmail.com
+Year: 4
+Semester: 8
+Semester 1 SGPA: 5.00
+Semester 2 SGPA: 5.50
+Semester 3 SGPA: 5.50
+Semester 4 SGPA: 5.30
+Semester 5 SGPA: 5.50
+Semester 6 SGPA: 5.00
+Semester 7 SGPA: 5.50
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 2
+
+Enter SAP ID to search: 590033722
+
+Student Found!
+SAP ID: 590033722
+Roll Number: 105
+Name: Karan Singh
+Phone: 8745896511
+Email: karansingh@gmail.com
+Year: 1
+Semester: 1
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 3
+
+Enter SAP ID to calculate CGPA: 590033725
+
+Student Name: Rahul Verma
+SAP ID: 590033725
+CGPA: 8.50
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 3
+
+Enter SAP ID to calculate CGPA: 590033721
+
+Student Name: Aarav Mehta
+SAP ID: 590033721
+CGPA: 7.50
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 3
+
+Enter SAP ID to calculate CGPA: 590033723
+
+Student Name: Simran Kaur
+SAP ID: 590033723
+CGPA: 6.32
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 3
+
+Enter SAP ID to calculate CGPA: 590033724
+
+Student Name: Priya Verma
+SAP ID: 590033724
+CGPA: 5.33
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 3
+
+Enter SAP ID to calculate CGPA: 590033722
+
+Student Name: Karan Singh
+SAP ID: 590033722
+CGPA not available. No semesters completed.
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 4
+
+===== YEAR-WISE AVERAGE CGPA =====
+
+Year 1: No CGPA data available.
+
+Year 2: Average CGPA = 8.00 (2 students)
+
+Year 3: Average CGPA = 6.32 (1 student)
+
+Year 4: Average CGPA = 5.33 (1 student)
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 5
+
+========== ALL STUDENT RECORDS ==========
+
+Student 1
+-----------------------------------------
+SAP ID: 590033725
+Roll Number: 101
+Name: Rahul Verma
+Phone: 9874514785
+Email: rahulverma@gmail.com
+Year: 2
+Semester: 3
+Semester-wise SGPA:
+Semester 1: 8.00
+Semester 2: 9.00
+
+Student 2
+-----------------------------------------
+SAP ID: 590033721
+Roll Number: 102
+Name: Aarav Mehta
+Phone: 7589451258
+Email: aarav789@gmail.com
+Year: 2
+Semester: 4
+Semester-wise SGPA:
+Semester 1: 7.00
+Semester 2: 7.50
+Semester 3: 8.00
+
+Student 3
+-----------------------------------------
+SAP ID: 590033723
+Roll Number: 103
+Name: Simran Kaur
+Phone: 9574815487
+Email: simrankaur4@gmail.com
+Year: 3
+Semester: 6
+Semester-wise SGPA:
+Semester 1: 6.00
+Semester 2: 6.50
+Semester 3: 6.30
+Semester 4: 6.30
+Semester 5: 6.50
+
+Student 4
+-----------------------------------------
+SAP ID: 590033724
+Roll Number: 104
+Name: Priya Verma
+Phone: 7589847256
+Email: vermapriya@gmail.com
+Year: 4
+Semester: 8
+Semester-wise SGPA:
+Semester 1: 5.00
+Semester 2: 5.50
+Semester 3: 5.50
+Semester 4: 5.30
+Semester 5: 5.50
+Semester 6: 5.00
+Semester 7: 5.50
+
+Student 5
+-----------------------------------------
+SAP ID: 590033722
+Roll Number: 105
+Name: Karan Singh
+Phone: 8745896511
+Email: karansingh@gmail.com
+Year: 1
+Semester: 1
+Semester-wise SGPA:
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 7
+
+Students sorted by SAP ID successfully!
+
+========== ALL STUDENT RECORDS ==========
+
+Student 1
+-----------------------------------------
+SAP ID: 590033721
+Roll Number: 102
+Name: Aarav Mehta
+Phone: 7589451258
+Email: aarav789@gmail.com
+Year: 2
+Semester: 4
+Semester-wise SGPA:
+Semester 1: 7.00
+Semester 2: 7.50
+Semester 3: 8.00
+
+Student 2
+-----------------------------------------
+SAP ID: 590033722
+Roll Number: 105
+Name: Karan Singh
+Phone: 8745896511
+Email: karansingh@gmail.com
+Year: 1
+Semester: 1
+Semester-wise SGPA:
+
+Student 3
+-----------------------------------------
+SAP ID: 590033723
+Roll Number: 103
+Name: Simran Kaur
+Phone: 9574815487
+Email: simrankaur4@gmail.com
+Year: 3
+Semester: 6
+Semester-wise SGPA:
+Semester 1: 6.00
+Semester 2: 6.50
+Semester 3: 6.30
+Semester 4: 6.30
+Semester 5: 6.50
+
+Student 4
+-----------------------------------------
+SAP ID: 590033724
+Roll Number: 104
+Name: Priya Verma
+Phone: 7589847256
+Email: vermapriya@gmail.com
+Year: 4
+Semester: 8
+Semester-wise SGPA:
+Semester 1: 5.00
+Semester 2: 5.50
+Semester 3: 5.50
+Semester 4: 5.30
+Semester 5: 5.50
+Semester 6: 5.00
+Semester 7: 5.50
+
+Student 5
+-----------------------------------------
+SAP ID: 590033725
+Roll Number: 101
+Name: Rahul Verma
+Phone: 9874514785
+Email: rahulverma@gmail.com
+Year: 2
+Semester: 3
+Semester-wise SGPA:
+Semester 1: 8.00
+Semester 2: 9.00
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 8
+
+Students sorted by Name successfully!
+
+========== ALL STUDENT RECORDS ==========
+
+Student 1
+-----------------------------------------
+SAP ID: 590033721
+Roll Number: 102
+Name: Aarav Mehta
+Phone: 7589451258
+Email: aarav789@gmail.com
+Year: 2
+Semester: 4
+Semester-wise SGPA:
+Semester 1: 7.00
+Semester 2: 7.50
+Semester 3: 8.00
+
+Student 2
+-----------------------------------------
+SAP ID: 590033722
+Roll Number: 105
+Name: Karan Singh
+Phone: 8745896511
+Email: karansingh@gmail.com
+Year: 1
+Semester: 1
+Semester-wise SGPA:
+
+Student 3
+-----------------------------------------
+SAP ID: 590033724
+Roll Number: 104
+Name: Priya Verma
+Phone: 7589847256
+Email: vermapriya@gmail.com
+Year: 4
+Semester: 8
+Semester-wise SGPA:
+Semester 1: 5.00
+Semester 2: 5.50
+Semester 3: 5.50
+Semester 4: 5.30
+Semester 5: 5.50
+Semester 6: 5.00
+Semester 7: 5.50
+
+Student 4
+-----------------------------------------
+SAP ID: 590033725
+Roll Number: 101
+Name: Rahul Verma
+Phone: 9874514785
+Email: rahulverma@gmail.com
+Year: 2
+Semester: 3
+Semester-wise SGPA:
+Semester 1: 8.00
+Semester 2: 9.00
+
+Student 5
+-----------------------------------------
+SAP ID: 590033723
+Roll Number: 103
+Name: Simran Kaur
+Phone: 9574815487
+Email: simrankaur4@gmail.com
+Year: 3
+Semester: 6
+Semester-wise SGPA:
+Semester 1: 6.00
+Semester 2: 6.50
+Semester 3: 6.30
+Semester 4: 6.30
+Semester 5: 6.50
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 9
+
+===== AI-ASSISTED ACADEMIC ADVISOR =====
+Enter Student SAP ID: 590033721
+
+Student: Aarav Mehta
+CGPA: 7.50
+Category: Good Performance
+Advice: You're doing well. Review weaker semesters and aim for consistent improvement.
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 9
+
+===== AI-ASSISTED ACADEMIC ADVISOR =====
+Enter Student SAP ID: 590033722
+
+Student: Karan Singh
+No SGPA available yet.
+Academic advice cannot be generated.
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 9  
+
+===== AI-ASSISTED ACADEMIC ADVISOR =====
+Enter Student SAP ID: 590033723
+
+Student: Simran Kaur
+CGPA: 6.32
+Category: Needs Improvement
+Advice: Focus on regular revision, attendance and completing assignments on time.
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 9
+
+===== AI-ASSISTED ACADEMIC ADVISOR =====
+Enter Student SAP ID: 590033724
+
+Student: Priya Verma
+CGPA: 5.33
+Category: Requires Immediate Attention
+Advice: Speak with your academic mentor and prepare a weekly study plan.
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 9
+
+===== AI-ASSISTED ACADEMIC ADVISOR =====
+Enter Student SAP ID: 590033725
+
+Student: Rahul Verma
+CGPA: 8.50
+Category: Excellent Performance
+Advice: Great work! Maintain your study routine and explore new learning opportunities.
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 6
+
+Enter SAP ID of student to delete: 590033723
+
+Deleting student: Simran Kaur
+Student record deleted successfully!
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 5
+
+========== ALL STUDENT RECORDS ==========
+
+Student 1
+-----------------------------------------
+SAP ID: 590033721
+Roll Number: 102
+Name: Aarav Mehta
+Phone: 7589451258
+Email: aarav789@gmail.com
+Year: 2
+Semester: 4
+Semester-wise SGPA:
+Semester 1: 7.00
+Semester 2: 7.50
+Semester 3: 8.00
+
+Student 2
+-----------------------------------------
+SAP ID: 590033722
+Roll Number: 105
+Name: Karan Singh
+Phone: 8745896511
+Email: karansingh@gmail.com
+Year: 1
+Semester: 1
+Semester-wise SGPA:
+
+Student 3
+-----------------------------------------
+SAP ID: 590033724
+Roll Number: 104
+Name: Priya Verma
+Phone: 7589847256
+Email: vermapriya@gmail.com
+Year: 4
+Semester: 8
+Semester-wise SGPA:
+Semester 1: 5.00
+Semester 2: 5.50
+Semester 3: 5.50
+Semester 4: 5.30
+Semester 5: 5.50
+Semester 6: 5.00
+Semester 7: 5.50
+
+Student 4
+-----------------------------------------
+SAP ID: 590033725
+Roll Number: 101
+Name: Rahul Verma
+Phone: 9874514785
+Email: rahulverma@gmail.com
+Year: 2
+Semester: 3
+Semester-wise SGPA:
+Semester 1: 8.00
+Semester 2: 9.00
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 0
+Exiting program...
