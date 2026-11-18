@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
+#include <ctype.h>
 
 #define MAX_STUDENTS 100
 
@@ -15,131 +17,256 @@ struct Student
     float sgpa[8];
 };
 
-void addStudent(struct Student students[], int *count)
+
+void clearInputBuffer(void)
 {
-    if (*count >= MAX_STUDENTS)
+    int ch;
+
+    while ((ch = getchar()) != '\n' && ch != EOF)
     {
-        printf("Student storage is full.\n");
-        return;
-    }
-
-    int i;
-    int completedSemesters;
-
-    printf("\n--- Add New Student ---\n");
-
-    printf("Enter SAP ID: ");
-    scanf("%lld", &students[*count].sapID);
-
-    for (i = 0; i < *count; i++)
-{
-    if (students[i].sapID == students[*count].sapID)
-    {
-        printf("Error: This SAP ID already exists!\n");
-        return;
     }
 }
 
-    printf("Enter Roll Number: ");
-    scanf("%19s", students[*count].rollNo);
 
-    printf("Enter Student Name: ");
-    scanf(" %49[^\n]", students[*count].name);
 
-    printf("Enter Phone Number: ");
-    scanf("%14s", students[*count].phone);
-
-    printf("Enter Email ID: ");
-    scanf("%99s", students[*count].email);
-
-    do
+void addStudent(struct Student students[], int *count)
 {
-    printf("Enter Year (1-4): ");
+    int i;
+    int completedSemesters;
+    int inputOK;
 
-    if (scanf("%d", &students[*count].year) != 1)
+    if (*count >= MAX_STUDENTS)
     {
-        printf("Invalid input. Please enter a number.\n");
-
-        int ch;
-        while ((ch = getchar()) != '\n' && ch != EOF)
-        {
-        }
-
-        students[*count].year = 0;
-        continue;
-    }
-
-    if (students[*count].year < 1 ||
-        students[*count].year > 4)
-    {
-        printf("Year must be between 1 and 4.\n");
-    }
-
-} while (students[*count].year < 1 ||
-         students[*count].year > 4);
-
-
-    do
-{
-    printf("Enter Current Semester (1-8): ");
-
-    if (scanf("%d", &students[*count].semester) != 1)
-    {
-        printf("Invalid input. Please enter a number.\n");
-
-        int ch;
-        while ((ch = getchar()) != '\n' && ch != EOF)
-        {
-        }
-
-        students[*count].semester = 0;
-        continue;
-    }
-
-    if (students[*count].semester < 1 ||
-        students[*count].semester > 8 ||
-        (students[*count].semester + 1) / 2 !=
-         students[*count].year)
-    {
-        printf("Invalid semester for the selected year.\n");
-        students[*count].semester = 0;
-    }
-
-} while (students[*count].semester == 0);
-
-    // Initialize all SGPA values as unavailable
-    for (i = 0; i < 8; i++)
-    {
-        students[*count].sgpa[i] = -1;
-    }
-
-    printf("How many semesters have been completed (0-8)? ");
-    scanf("%d", &completedSemesters);
-
-    if (completedSemesters < 0 ||
-    completedSemesters > students[*count].semester)
-    {
-        printf("Invalid number of semesters!\n");
+        printf("\nStudent storage is full.\n");
         return;
     }
 
+    printf("\n--- Add New Student ---\n");
+
+    // SAP ID input and duplicate checking
+    while (1)
+    {
+        printf("Enter SAP ID: ");
+
+        inputOK = scanf("%lld", &students[*count].sapID);
+
+        if (inputOK != 1)
+        {
+            printf("Invalid SAP ID. Enter numbers only.\n");
+            clearInputBuffer();
+            continue;
+        }
+
+        clearInputBuffer();
+
+        if (students[*count].sapID <= 0)
+        {
+            printf("SAP ID must be positive.\n");
+            continue;
+        }
+
+        for (i = 0; i < *count; i++)
+        {
+            if (students[i].sapID == students[*count].sapID)
+            {
+                break;
+            }
+        }
+
+        if (i < *count)
+        {
+            printf("Error: This SAP ID already exists!\n");
+            return;
+        }
+
+        break;
+    }
+
+    // Roll number
+    printf("Enter Roll Number: ");
+    while (scanf("%19s", students[*count].rollNo) != 1)
+    {
+        printf("Invalid roll number. Try again: ");
+        clearInputBuffer();
+    }
+    clearInputBuffer();
+
+    
+    
+    // Student name validation
+    int validName;
+    int hasLetter;
+
+    while (1)
+    {
+        printf("Enter Student Name: ");
+
+        if (fgets(students[*count].name,
+                  sizeof(students[*count].name), stdin) == NULL)
+        {
+            printf("Error reading name.\n");
+            return;
+        }
+
+        // Remove newline
+        students[*count].name[
+            strcspn(students[*count].name, "\n")
+        ] = '\0';
+
+        validName = 1;
+        hasLetter = 0;
+
+        for (i = 0; students[*count].name[i] != '\0'; i++)
+        {
+            unsigned char ch =
+                (unsigned char)students[*count].name[i];
+
+            if (isalpha(ch))
+            {
+                hasLetter = 1;
+            }
+            else if (ch != ' ')
+            {
+                validName = 0;
+                break;
+            }
+        }
+
+        if (validName && hasLetter)
+        {
+            break;
+        }
+
+        printf("Invalid name! Only letters and spaces allowed.\n");
+    }
+
+    // Phone number
+    printf("Enter Phone Number: ");
+    while (scanf("%14s", students[*count].phone) != 1)
+    {
+        printf("Invalid phone number. Try again: ");
+        clearInputBuffer();
+    }
+    clearInputBuffer();
+
+    // Email
+    printf("Enter Email ID: ");
+    while (scanf("%99s", students[*count].email) != 1)
+    {
+        printf("Invalid email. Try again: ");
+        clearInputBuffer();
+    }
+    clearInputBuffer();
+
+    // Year validation
+    while (1)
+    {
+        printf("Enter Year (1-4): ");
+
+        if (scanf("%d", &students[*count].year) != 1)
+        {
+            printf("Invalid input. Enter a number.\n");
+            clearInputBuffer();
+            continue;
+        }
+
+        clearInputBuffer();
+
+        if (students[*count].year >= 1 &&
+            students[*count].year <= 4)
+        {
+            break;
+        }
+
+        printf("Year must be between 1 and 4.\n");
+    }
+
+    // Semester validation
+    while (1)
+    {
+        printf("Enter Current Semester (1-8): ");
+
+        if (scanf("%d", &students[*count].semester) != 1)
+        {
+            printf("Invalid input. Enter a number.\n");
+            clearInputBuffer();
+            continue;
+        }
+
+        clearInputBuffer();
+
+        if (students[*count].semester >= 1 &&
+            students[*count].semester <= 8 &&
+            (students[*count].semester + 1) / 2 ==
+            students[*count].year)
+        {
+            break;
+        }
+
+        printf("Invalid semester for the selected year.\n");
+    }
+
+    // Initialize unavailable SGPA values
+    for (i = 0; i < 8; i++)
+    {
+        students[*count].sgpa[i] = -1.0f;
+    }
+
+    // Completed semesters validation
+    while (1)
+    {
+        printf("How many semesters have been completed? ");
+
+        if (scanf("%d", &completedSemesters) != 1)
+        {
+            printf("Invalid input. Enter a number.\n");
+            clearInputBuffer();
+            continue;
+        }
+
+        clearInputBuffer();
+
+        if (completedSemesters >= 0 &&
+            completedSemesters <= students[*count].semester)
+        {
+            break;
+        }
+
+        printf("Invalid number of completed semesters.\n");
+    }
+
+    // SGPA input and validation
     for (i = 0; i < completedSemesters; i++)
     {
-        printf("Enter SGPA for Semester %d: ", i + 1);
-        scanf("%f", &students[*count].sgpa[i]);
-
-        if (students[*count].sgpa[i] < 0 ||
-            students[*count].sgpa[i] > 10)
+        while (1)
         {
-            printf("Invalid SGPA! Enter between 0 and 10.\n");
-            i--;
+            printf("Enter SGPA for Semester %d: ", i + 1);
+
+            if (scanf("%f", &students[*count].sgpa[i]) != 1)
+            {
+                printf("Invalid input. Enter a number.\n");
+                clearInputBuffer();
+                continue;
+            }
+
+            clearInputBuffer();
+
+            if (isfinite(students[*count].sgpa[i]) &&
+                students[*count].sgpa[i] >= 0.0f &&
+                students[*count].sgpa[i] <= 10.0f)
+            {
+                break;
+            }
+
+            printf("SGPA must be between 0 and 10.\n");
         }
     }
 
     (*count)++;
 
-    printf("Student added successfully.\n");
+    printf("\nStudent added successfully!\n");
 }
+
 
 
 void displayAllStudents(struct Student students[], int count)
