@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 #define MAX_STUDENTS 100
 
@@ -30,6 +31,15 @@ void addStudent(struct Student students[], int *count)
     printf("Enter SAP ID: ");
     scanf("%lld", &students[*count].sapID);
 
+    for (i = 0; i < *count; i++)
+{
+    if (students[i].sapID == students[*count].sapID)
+    {
+        printf("Error: This SAP ID already exists!\n");
+        return;
+    }
+}
+
     printf("Enter Roll Number: ");
     scanf("%19s", students[*count].rollNo);
 
@@ -42,11 +52,60 @@ void addStudent(struct Student students[], int *count)
     printf("Enter Email ID: ");
     scanf("%99s", students[*count].email);
 
+    do
+{
     printf("Enter Year (1-4): ");
-    scanf("%d", &students[*count].year);
 
+    if (scanf("%d", &students[*count].year) != 1)
+    {
+        printf("Invalid input. Please enter a number.\n");
+
+        int ch;
+        while ((ch = getchar()) != '\n' && ch != EOF)
+        {
+        }
+
+        students[*count].year = 0;
+        continue;
+    }
+
+    if (students[*count].year < 1 ||
+        students[*count].year > 4)
+    {
+        printf("Year must be between 1 and 4.\n");
+    }
+
+} while (students[*count].year < 1 ||
+         students[*count].year > 4);
+
+
+    do
+{
     printf("Enter Current Semester (1-8): ");
-    scanf("%d", &students[*count].semester);
+
+    if (scanf("%d", &students[*count].semester) != 1)
+    {
+        printf("Invalid input. Please enter a number.\n");
+
+        int ch;
+        while ((ch = getchar()) != '\n' && ch != EOF)
+        {
+        }
+
+        students[*count].semester = 0;
+        continue;
+    }
+
+    if (students[*count].semester < 1 ||
+        students[*count].semester > 8 ||
+        (students[*count].semester + 1) / 2 !=
+         students[*count].year)
+    {
+        printf("Invalid semester for the selected year.\n");
+        students[*count].semester = 0;
+    }
+
+} while (students[*count].semester == 0);
 
     // Initialize all SGPA values as unavailable
     for (i = 0; i < 8; i++)
@@ -57,7 +116,8 @@ void addStudent(struct Student students[], int *count)
     printf("How many semesters have been completed (0-8)? ");
     scanf("%d", &completedSemesters);
 
-    if (completedSemesters < 0 || completedSemesters > 8)
+    if (completedSemesters < 0 ||
+    completedSemesters > students[*count].semester)
     {
         printf("Invalid number of semesters!\n");
         return;
@@ -470,7 +530,19 @@ int main()
         printf("0. Exit\n");
 
         printf("Enter your choice: ");
-        scanf("%d", &choice);
+
+        if (scanf("%d", &choice) != 1)
+{
+    printf("Invalid input! Please enter a number.\n");
+
+    int ch;
+    while ((ch = getchar()) != '\n' && ch != EOF)
+    {
+    }
+
+    choice = -1;
+    continue;
+}
 
         switch (choice)
         {
