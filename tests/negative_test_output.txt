@@ -1,0 +1,158 @@
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 1
+
+--- Add New Student ---
+Enter SAP ID: 590033724
+Enter Roll Number: 104
+Enter Student Name: Priya Verma
+Enter Phone Number: 7589847256
+Enter Email ID: vermapriya@gmail.com
+Enter Year (1-4): 4
+Enter Current Semester (1-8): 8
+How many semesters have been completed? 7
+Enter SGPA for Semester 1: 5
+Enter SGPA for Semester 2: 5.5
+Enter SGPA for Semester 3: 5.5
+Enter SGPA for Semester 4: 5.3
+Enter SGPA for Semester 5: 5.5
+Enter SGPA for Semester 6: 5
+Enter SGPA for Semester 7: 5.5
+
+Student added successfully!
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 1
+
+--- Add New Student ---
+Enter SAP ID: 590033724
+Error: This SAP ID already exists!
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 1
+
+--- Add New Student ---
+Enter SAP ID: 590033726
+Enter Roll Number: 106
+Enter Student Name: Dev 125
+Invalid name! Only letters and spaces allowed.
+Enter Student Name: Dev
+Enter Phone Number: 8547512589
+Enter Email ID: dev125@gmail.com
+Enter Year (1-4): 5
+Year must be between 1 and 4.
+Enter Year (1-4): 1
+Enter Current Semester (1-8): 7
+Invalid semester for the selected year.
+Enter Current Semester (1-8): 2
+How many semesters have been completed? 1
+Enter SGPA for Semester 1: 11
+SGPA must be between 0 and 10.
+Enter SGPA for Semester 1: 8.5
+
+Student added successfully!
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: abc
+Invalid input! Please enter a number.
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 2
+
+Enter SAP ID to search: 590033728
+
+Student with SAP ID 590033728 not found.
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 6
+
+Enter SAP ID of student to delete: 590033727
+
+Student with SAP ID 590033727 not found.
+
+============================================
+ STUDENT RECORD AND RESULT MANAGEMENT SYSTEM
+============================================
+1. Add Student
+2. Search Student
+3. Display Student CGPA
+4. Display Average CGPA by Year
+5. Display All Students
+6. Delete Student
+7. Display Students Sorted by SAP ID
+8. Display Students Sorted by Name
+9. Academic Advisor
+0. Exit
+Enter your choice: 0
+Exiting program...
