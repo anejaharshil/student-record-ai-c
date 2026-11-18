@@ -526,7 +526,8 @@ void displayYearAverage(struct Student students[], int count)
         else
         {
             printf("Average CGPA = %.2f (%d students)\n",
-                   totalCGPA / studentCount, studentCount);
+                   totalCGPA / studentCount, studentCount, 
+                studentCount == 1 ? "student" : "students");
         }
     }
 }
