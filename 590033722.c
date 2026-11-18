@@ -186,6 +186,80 @@ float calculateCGPA(struct Student student)
 }
 
 
+void academicAdvisor(struct Student students[], int count)
+{
+    long long sapID;
+    int i;
+    float cgpa;
+
+    if (count == 0)
+    {
+        printf("\nNo student records available.\n");
+        return;
+    }
+
+    printf("\n===== AI-ASSISTED ACADEMIC ADVISOR =====\n");
+    printf("Enter Student SAP ID: ");
+
+    if (scanf("%lld", &sapID) != 1)
+    {
+        printf("Invalid SAP ID input.\n");
+        return;
+    }
+
+    for (i = 0; i < count; i++)
+    {
+        if (students[i].sapID == sapID)
+        {
+            cgpa = calculateCGPA(students[i]);
+
+            printf("\nStudent: %s\n", students[i].name);
+
+            if (cgpa < 0)
+            {
+                printf("No SGPA available yet.\n");
+                printf("Academic advice cannot be generated.\n");
+            }
+            else if (cgpa > 10.0f)
+            {
+                printf("Invalid CGPA value.\n");
+            }
+            else
+            {
+                printf("CGPA: %.2f\n", cgpa);
+
+                if (cgpa >= 8.5f)
+                {
+                    printf("Category: Excellent Performance\n");
+                    printf("Advice: Great work! Maintain your study routine and explore new learning opportunities.\n");
+                }
+                else if (cgpa >= 7.0f)
+                {
+                    printf("Category: Good Performance\n");
+                    printf("Advice: You're doing well. Review weaker semesters and aim for consistent improvement.\n");
+                }
+                else if (cgpa >= 6.0f)
+                {
+                    printf("Category: Needs Improvement\n");
+                    printf("Advice: Focus on regular revision, attendance and completing assignments on time.\n");
+                }
+                else
+                {
+                    printf("Category: Requires Immediate Attention\n");
+                    printf("Advice: Speak with your academic mentor and prepare a weekly study plan.\n");
+                }
+            }
+
+            return;
+        }
+    }
+
+    printf("\nStudent not found!\n");
+}
+
+
+
+
 void displayStudentCGPA(struct Student students[], int count)
 {
     long long sapID;
@@ -433,7 +507,7 @@ int main()
                 break;
 
             case 9:
-                printf("Academic Advisor selected.\n");
+                academicAdvisor(students, studentCount);
                 break;
 
             case 0:
